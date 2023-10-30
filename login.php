@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php require 'inc/head.php'; ?>
 <div class="container" style="margin-top:40px">
     <div class="row">
@@ -7,7 +8,7 @@
                     <strong> Sign in to continue</strong>
                 </div>
                 <div class="panel-body">
-                    <form role="form" action="#" method="POST">
+                    <form role="form" action="index.php" method="POST">
                         <fieldset>
                             <div class="row">
                                 <div class="center-block">

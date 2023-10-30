@@ -1,7 +1,20 @@
-<?php require 'inc/head.php'; ?>
+<?php
+session_start();
+require 'inc/head.php';
+?>
+
 <section class="cookies container-fluid">
     <div class="row">
-        TODO : Display shopping cart items from $_SESSION here.
+        <?php
+        if (isset($_SESSION['cart'])) {
+            foreach ($_SESSION['cart'] as $cookie) {
+                echo '<h1>' . $cookie['name'] . '</h1>';
+                echo '<p>' . $cookie['description'] . '</p>';
+            }
+        } else {
+            echo "<p>Il  n'y a rien dans le panier</p>";
+        }
+        ?>
     </div>
 </section>
 <?php require 'inc/foot.php'; ?>
